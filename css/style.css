@@ -1,0 +1,564 @@
+/* exo-regular - vietnamese_latin */
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/exo-v11-vietnamese_latin-regular.eot");
+  src: local(""), url("../fonts/exo-v11-vietnamese_latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-vietnamese_latin-regular.woff2") format("woff2"), url("../fonts/exo-v11-vietnamese_latin-regular.woff") format("woff"), url("../fonts/exo-v11-vietnamese_latin-regular.ttf") format("truetype"), url("../fonts/exo-v11-vietnamese_latin-regular.svg#Exo") format("svg");
+}
+
+/* exo-600 - vietnamese_latin */
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/exo-v11-vietnamese_latin-600.eot");
+  src: local(""), url("../fonts/exo-v11-vietnamese_latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-vietnamese_latin-600.woff2") format("woff2"), url("../fonts/exo-v11-vietnamese_latin-600.woff") format("woff"), url("../fonts/exo-v11-vietnamese_latin-600.ttf") format("truetype"), url("../fonts/exo-v11-vietnamese_latin-600.svg#Exo") format("svg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Exo", sans-serif;
+  color: #083755;
+  background: #f2efe4;
+}
+
+.main {
+  width: 100%;
+  z-index: 9999;
+}
+
+.section-block {
+  height: 100vh;
+  z-index: 100;
+  padding-top: 10vh;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #083755;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav__logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav__logo a {
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  word-spacing: -1px;
+}
+
+.nav__logo a h1 {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 6px;
+  font-weight: 600;
+}
+
+.nav__menu {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.nav__menu__link {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 2px 0;
+  height: 20px;
+  overflow: hidden;
+}
+
+.nav__menu__link span {
+  display: inline-block;
+}
+
+.nav__menu__link + .nav__menu__link {
+  margin-top: 6px;
+  margin-left: 0;
+}
+
+.nav__menu__link.active {
+  color: #f2aa4c;
+}
+
+.nav__menu__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  width: 0;
+  background-color: #f2aa4c;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav__menu__link:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.nav__socials {
+  position: fixed;
+  right: auto;
+  bottom: auto;
+  top: 77px;
+  left: 20px;
+  z-index: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.nav__socials__link {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nav__socials__link svg {
+  fill: #083755;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav__socials__link:hover svg {
+  fill: #f2aa4c;
+}
+
+.nav__email {
+  color: #083755;
+  font-size: 13px;
+  position: fixed;
+  bottom: auto;
+  top: 50px;
+  left: 20px;
+  height: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav__email span {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 576px) {
+  .nav__logo, .nav__email {
+    left: 35px;
+  }
+  .nav__menu, .nav__socials {
+    right: 35px;
+  }
+  .nav__logo, .nav__menu {
+    top: 40px;
+  }
+  .nav__socials, .nav__email {
+    bottom: 30px;
+    top: auto;
+  }
+  .nav__socials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    bottom: auto;
+    top: 70px;
+    left: auto;
+  }
+  .nav__email {
+    bottom: auto;
+    top: 70px;
+  }
+  .nav__menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav__menu__link + .nav__menu__link {
+    margin-top: 0;
+    margin-left: 35px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav__logo, .nav__email {
+    left: 40px;
+  }
+  .nav__menu, .nav__socials {
+    right: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .nav__logo, .nav__email {
+    left: 45px;
+  }
+  .nav__menu, .nav__socials {
+    right: 45px;
+  }
+  .nav__socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    bottom: 30px;
+    top: auto;
+    left: auto;
+  }
+  .nav__email {
+    top: auto;
+    bottom: 30px;
+    right: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav__logo, .nav__email {
+    left: 50px;
+  }
+  .nav__menu, .nav__socials {
+    right: 50px;
+  }
+}
+
+.intro {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.intro__half, .intro__ver {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+.intro__half {
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: #000;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+
+.intro__half:last-child {
+  left: 50vw;
+}
+
+.intro__ver {
+  left: calc(50vw - 2px);
+  width: 2px;
+  background-color: #f2efe4;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  padding-top: 20vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+}
+
+.home__wrap {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home__text {
+  position: relative;
+  font-size: calc(2vw + 2vh);
+  line-height: 1.2;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.home__text p {
+  overflow: hidden;
+}
+
+.home__text span {
+  margin-top: 10px;
+  position: relative;
+  display: block;
+  font-size: calc(1.2vw + 1.2vh);
+}
+
+.home__mybrain {
+  margin-top: 30px;
+}
+
+.home__mybrain h2 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.home__mybrain h3 {
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.home__mybrain .brain-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
+
+.home__mybrain .brain-grid .brain-box {
+  margin-top: 20px;
+}
+
+.badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.badges .badge {
+  cursor: pointer;
+  margin: 5px 10px;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  --c-hover: #083755;
+}
+
+.badges .badge--html:hover {
+  --c-hover: #e34f26;
+}
+
+.badges .badge--css:hover {
+  --c-hover: #196eb3;
+}
+
+.badges .badge--js:hover {
+  --c-hover: #c5b011;
+}
+
+.badges .badge--git:hover {
+  --c-hover: #e84f31;
+}
+
+.badges .badge--npm:hover {
+  --c-hover: #cb3837;
+}
+
+.badges .badge--react:hover {
+  --c-hover: #08a9c5;
+}
+
+.badges .badge--redux:hover {
+  --c-hover: #7348b6;
+}
+
+.badges .badge--sass:hover {
+  --c-hover: #c76395;
+}
+
+.badges .badge--bootstrap:hover {
+  --c-hover: #533b77;
+}
+
+.badges .badge--others:hover {
+  --c-hover: #f2aa4c;
+}
+
+.badges .badge--ts:hover {
+  --c-hover: #3178c6;
+}
+
+.badges .badge--gsap:hover {
+  --c-hover: #86c03c;
+}
+
+.badges .badge--next:hover {
+  --c-hover: #000;
+}
+
+.badges .badge--graph:hover {
+  --c-hover: #db0593;
+}
+
+.badges .badge::before, .badges .badge::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: calc(100% + 10px);
+  background: var(--c-hover);
+  z-index: -1;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+
+.badges .badge::before {
+  top: 0;
+  left: -10px;
+}
+
+.badges .badge::after {
+  bottom: 0;
+  right: -10px;
+}
+
+.badges .badge:hover::before {
+  left: -5px;
+}
+
+.badges .badge:hover::after {
+  right: -5px;
+}
+
+@media only screen and (min-width: 576px) {
+  .home {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .home__mybrain {
+    margin-top: 35px;
+  }
+  .home__mybrain h2 {
+    font-size: 16px;
+  }
+  .home__mybrain h3 {
+    font-size: 15px;
+  }
+  .home__mybrain .brain-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .home__mybrain {
+    margin-top: 40px;
+  }
+  .home__mybrain h2 {
+    font-size: 18px;
+  }
+  .home__mybrain h3 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .home {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .home__mybrain {
+    margin-top: 45px;
+  }
+  .home__mybrain h2 {
+    font-size: 20px;
+  }
+  .home__mybrain h3 {
+    font-size: 18px;
+  }
+  .home__mybrain .brain-grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .home__mybrain {
+    margin-top: 50px;
+  }
+  .home__mybrain h2 {
+    font-size: 22px;
+  }
+  .home__mybrain h3 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
