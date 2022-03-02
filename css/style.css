@@ -459,6 +459,31 @@ ul {
   --c-hover: #db0593;
 }
 
+.badges .badge--node:hover {
+  --c-hover: #87BE49;
+}
+
+.badges .badge--express:hover {
+  --c-hover: #EAD41C;
+}
+
+.badges .badge--mui:hover {
+  --c-hover: #0079F2;
+}
+
+.badges .badge--tailwind:hover {
+  --c-hover: #15B4C1;
+}
+
+.badges .badge--mongodb:hover {
+  --c-hover: #82BC5C;
+}
+
+.badges .badge--photoshop:hover {
+  --c-hover: #001C33;
+}
+
+
 .badges .badge::before, .badges .badge::after {
   content: "";
   position: absolute;
