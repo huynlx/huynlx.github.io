@@ -37,6 +37,7 @@ body {
   font-family: "Exo", sans-serif;
   color: #083755;
   background: #f2efe4;
+  /* overflow-x: hidden; */
 }
 
 .main {
