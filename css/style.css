@@ -38,6 +38,7 @@ body {
   color: #083755;
   background: #f2efe4;
   /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
 }
 
 .main {

@@ -144,5 +144,6 @@ canvas {
   top: 0;
   left: 0;
   height: auto;
+  width: 99.9vw;
   /* z-index: 100; */
 }
