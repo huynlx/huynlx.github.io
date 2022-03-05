@@ -4,7 +4,11 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/exo-v11-vietnamese_latin-regular.eot");
-  src: local(""), url("../fonts/exo-v11-vietnamese_latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-vietnamese_latin-regular.woff2") format("woff2"), url("../fonts/exo-v11-vietnamese_latin-regular.woff") format("woff"), url("../fonts/exo-v11-vietnamese_latin-regular.ttf") format("truetype"), url("../fonts/exo-v11-vietnamese_latin-regular.svg#Exo") format("svg");
+  src: local(""), url("../fonts/exo-v11-vietnamese_latin-regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/exo-v11-vietnamese_latin-regular.woff2") format("woff2"),
+    url("../fonts/exo-v11-vietnamese_latin-regular.woff") format("woff"),
+    url("../fonts/exo-v11-vietnamese_latin-regular.ttf") format("truetype"),
+    url("../fonts/exo-v11-vietnamese_latin-regular.svg#Exo") format("svg");
 }
 
 /* exo-600 - vietnamese_latin */
@@ -13,7 +17,11 @@
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/exo-v11-vietnamese_latin-600.eot");
-  src: local(""), url("../fonts/exo-v11-vietnamese_latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/exo-v11-vietnamese_latin-600.woff2") format("woff2"), url("../fonts/exo-v11-vietnamese_latin-600.woff") format("woff"), url("../fonts/exo-v11-vietnamese_latin-600.ttf") format("truetype"), url("../fonts/exo-v11-vietnamese_latin-600.svg#Exo") format("svg");
+  src: local(""), url("../fonts/exo-v11-vietnamese_latin-600.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/exo-v11-vietnamese_latin-600.woff2") format("woff2"),
+    url("../fonts/exo-v11-vietnamese_latin-600.woff") format("woff"),
+    url("../fonts/exo-v11-vietnamese_latin-600.ttf") format("truetype"),
+    url("../fonts/exo-v11-vietnamese_latin-600.svg#Exo") format("svg");
 }
 
 * {
@@ -27,7 +35,7 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -101,8 +109,8 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: right;
 }
 
@@ -159,8 +167,10 @@ ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 150px;
 }
 
 .nav__socials__link {
@@ -170,11 +180,11 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   overflow: hidden;
   display: inline-block;
 }
@@ -205,28 +215,40 @@ ul {
   display: inline-block;
 }
 
+#canvas{
+  display: none;
+}
+
 @media only screen and (min-width: 576px) {
-  .nav__logo, .nav__email {
+  #canvas{
+    display: block;
+  }
+  .nav__logo,
+  .nav__email {
     left: 35px;
   }
-  .nav__menu, .nav__socials {
+  .nav__menu,
+  .nav__socials {
     right: 35px;
   }
-  .nav__logo, .nav__menu {
+  .nav__logo,
+  .nav__menu {
     top: 40px;
   }
-  .nav__socials, .nav__email {
+  .nav__socials,
+  .nav__email {
     bottom: 30px;
     top: auto;
   }
   .nav__socials {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     bottom: auto;
     top: 70px;
     left: auto;
+    width: auto;
   }
   .nav__email {
     bottom: auto;
@@ -235,8 +257,8 @@ ul {
   .nav__menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .nav__menu__link + .nav__menu__link {
     margin-top: 0;
@@ -245,26 +267,30 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
-  .nav__logo, .nav__email {
+  .nav__logo,
+  .nav__email {
     left: 40px;
   }
-  .nav__menu, .nav__socials {
+  .nav__menu,
+  .nav__socials {
     right: 40px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .nav__logo, .nav__email {
+  .nav__logo,
+  .nav__email {
     left: 45px;
   }
-  .nav__menu, .nav__socials {
+  .nav__menu,
+  .nav__socials {
     right: 45px;
   }
   .nav__socials {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: row;
+    flex-direction: row;
     bottom: 30px;
     top: auto;
     left: auto;
@@ -277,10 +303,12 @@ ul {
 }
 
 @media only screen and (min-width: 1200px) {
-  .nav__logo, .nav__email {
+  .nav__logo,
+  .nav__email {
     left: 50px;
   }
-  .nav__menu, .nav__socials {
+  .nav__menu,
+  .nav__socials {
     right: 50px;
   }
 }
@@ -291,7 +319,8 @@ ul {
   z-index: 9999;
 }
 
-.intro__half, .intro__ver {
+.intro__half,
+.intro__ver {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -333,8 +362,8 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .home__text {
@@ -374,8 +403,8 @@ ul {
 .home__mybrain .brain-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-columns: (1fr) [1];
+  grid-template-columns: repeat(1, 1fr);
   gap: 5px;
 }
 
@@ -388,7 +417,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .badges .badge {
@@ -462,31 +491,31 @@ ul {
 }
 
 .badges .badge--node:hover {
-  --c-hover: #87BE49;
+  --c-hover: #87be49;
 }
 
 .badges .badge--express:hover {
-  --c-hover: #EAD41C;
+  --c-hover: #ead41c;
 }
 
 .badges .badge--mui:hover {
-  --c-hover: #0079F2;
+  --c-hover: #0079f2;
 }
 
 .badges .badge--tailwind:hover {
-  --c-hover: #15B4C1;
+  --c-hover: #15b4c1;
 }
 
 .badges .badge--mongodb:hover {
-  --c-hover: #82BC5C;
+  --c-hover: #82bc5c;
 }
 
 .badges .badge--photoshop:hover {
-  --c-hover: #001C33;
+  --c-hover: #001c33;
 }
 
-
-.badges .badge::before, .badges .badge::after {
+.badges .badge::before,
+.badges .badge::after {
   content: "";
   position: absolute;
   height: 50%;
@@ -530,8 +559,8 @@ ul {
     font-size: 15px;
   }
   .home__mybrain .brain-grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 }
@@ -567,8 +596,8 @@ ul {
     font-size: 18px;
   }
   .home__mybrain .brain-grid {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
 }
