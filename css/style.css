@@ -454,6 +454,10 @@ ul {
   --c-hover: #cb3837;
 }
 
+.badges .badge--trello:hover {
+  --c-hover: #0073B5;
+}
+
 .badges .badge--react:hover {
   --c-hover: #08a9c5;
 }
