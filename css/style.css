@@ -4,7 +4,9 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/exo-v11-vietnamese_latin-regular.eot");
-  src: local(""), url("../fonts/exo-v11-vietnamese_latin-regular.eot?#iefix") format("embedded-opentype"),
+  src: local(""),
+    url("../fonts/exo-v11-vietnamese_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/exo-v11-vietnamese_latin-regular.woff2") format("woff2"),
     url("../fonts/exo-v11-vietnamese_latin-regular.woff") format("woff"),
     url("../fonts/exo-v11-vietnamese_latin-regular.ttf") format("truetype"),
@@ -17,7 +19,9 @@
   font-style: normal;
   font-weight: 600;
   src: url("../fonts/exo-v11-vietnamese_latin-600.eot");
-  src: local(""), url("../fonts/exo-v11-vietnamese_latin-600.eot?#iefix") format("embedded-opentype"),
+  src: local(""),
+    url("../fonts/exo-v11-vietnamese_latin-600.eot?#iefix")
+      format("embedded-opentype"),
     url("../fonts/exo-v11-vietnamese_latin-600.woff2") format("woff2"),
     url("../fonts/exo-v11-vietnamese_latin-600.woff") format("woff"),
     url("../fonts/exo-v11-vietnamese_latin-600.ttf") format("truetype"),
@@ -215,12 +219,12 @@ ul {
   display: inline-block;
 }
 
-#canvas{
+#canvas {
   display: none;
 }
 
 @media only screen and (min-width: 576px) {
-  #canvas{
+  #canvas {
     display: block;
   }
   .nav__logo,
@@ -454,8 +458,8 @@ ul {
   --c-hover: #cb3837;
 }
 
-.badges .badge--trello:hover {
-  --c-hover: #0073B5;
+.badges .badge--vim:hover {
+  --c-hover: #0d0;
 }
 
 .badges .badge--react:hover {
@@ -504,6 +508,10 @@ ul {
 
 .badges .badge--mui:hover {
   --c-hover: #0079f2;
+}
+
+.badges .badge--antd:hover {
+  --c-hover: #4096ff;
 }
 
 .badges .badge--tailwind:hover {
